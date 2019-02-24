@@ -49,6 +49,7 @@ RSpec.describe "Products", type: :feature do
       product.inventory = 1
       product.save
       visit products_path
+      
       click_button "More Info"
       expect(page).to have_content "Available"
     end

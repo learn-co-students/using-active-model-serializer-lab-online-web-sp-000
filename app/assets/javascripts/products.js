@@ -1,15 +1,11 @@
-$(function () {
-  $(".js-more").on("click", function () {
-    var id = $(this).data("id");
-    $.get("/products/" + id + ".json", function (product) {
-      $.get("/products/" + id + "/inventory", function (inventory) {
-        var inventoryText = "<strong>Available</strong>";
-        if (inventory === "false") {
-          inventoryText = "<strong>Sold Out</strong>";
-        }
-        var descriptionText = "<p>" + description + "</p><p>" + inventoryText + "</p>";
-        $("#product-" + id).html(descriptionText);
-      });
-    });
+function showProduct(id) {
+  $.get("/products/" + id + ".json", function (product) {
+    // debugger
+    let prefix = `#product-${id}-`
+    $(prefix+'description').html(product.description)
+    var inventoryText = "<b>Available</b>"
+    if (product.inventory < 0)
+      inventoryText = "<b>Sold Out</b>"     
+    $(prefix + 'inventory').html(inventoryText)
   });
-});
+}
