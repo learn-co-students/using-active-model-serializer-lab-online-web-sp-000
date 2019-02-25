@@ -2,16 +2,21 @@ function showProduct(id) {
   $.get("/products/" + id + ".json", function(product) {
     let div = `#product-${id} `;
     $(div + ".description").html(product.description);
-    let inventoryText = "<b>Available</b>";
-    if (product.inventory < 0) inventoryText = "<b>Sold Out</b>";
-    $(div + ".inventory").html(inventoryText);
+    let inventoryText = "Available";
+    if (product.inventory < 0) inventoryText = "Sold Out";
+    $(div + ".inventory").html(`<b>${inventoryText}</b>`);
     showOrders(product);
   });
 }
 
 function showOrders(product) {
+  let section = $(`#product-${product.id} .orders`)
+  section.append("<b>Orders</b>")
+  let html = "<ul>"
   for (order of product.orders) {
+    html += `<li>#${order.id} - created at ${order.created_at}</li>`
   }
+  section.append(html)
 }
 
 function loadNext(currentId) {
