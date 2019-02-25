@@ -7,6 +7,7 @@ function showProduct(id) {
       inventoryText = "<b>Sold Out</b>"     
     $(prefix + 'inventory').html(inventoryText)
   });
+  let orders = product.orders
 }
 
 function loadNext(currentId) {

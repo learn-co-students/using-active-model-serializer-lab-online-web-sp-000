@@ -2744,3 +2744,142 @@ Processing by ProductsController#show as JSON
   [1m[35mProduct Load (0.2ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 23]]
 [active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (0.27ms)
 Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.2ms)
+  [1m[36mOrder Load (0.6ms)[0m  [1mSELECT  "orders".* FROM "orders"  ORDER BY "orders"."id" ASC LIMIT 1[0m
+
+
+Started GET "/orders" for ::1 at 2019-02-25 09:19:26 -0500
+Processing by OrdersController#index as HTML
+  [1m[36mOrder Load (0.9ms)[0m  [1mSELECT "orders".* FROM "orders"[0m
+  [1m[35mProduct Load (0.6ms)[0m  SELECT "products".* FROM "products" INNER JOIN "ordered_products" ON "products"."id" = "ordered_products"."product_id" WHERE "ordered_products"."order_id" = ?  [["order_id", 21]]
+  [1m[36mCustomer Load (0.5ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 13]]
+  [1m[35mProduct Load (0.4ms)[0m  SELECT "products".* FROM "products" INNER JOIN "ordered_products" ON "products"."id" = "ordered_products"."product_id" WHERE "ordered_products"."order_id" = ?  [["order_id", 22]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 13]]
+  [1m[35mProduct Load (0.2ms)[0m  SELECT "products".* FROM "products" INNER JOIN "ordered_products" ON "products"."id" = "ordered_products"."product_id" WHERE "ordered_products"."order_id" = ?  [["order_id", 23]]
+  [1m[36mCustomer Load (0.2ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 11]]
+  [1m[35mProduct Load (0.2ms)[0m  SELECT "products".* FROM "products" INNER JOIN "ordered_products" ON "products"."id" = "ordered_products"."product_id" WHERE "ordered_products"."order_id" = ?  [["order_id", 24]]
+  [1m[36mCustomer Load (0.1ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" INNER JOIN "ordered_products" ON "products"."id" = "ordered_products"."product_id" WHERE "ordered_products"."order_id" = ?  [["order_id", 25]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 13]]
+  [1m[35mProduct Load (0.2ms)[0m  SELECT "products".* FROM "products" INNER JOIN "ordered_products" ON "products"."id" = "ordered_products"."product_id" WHERE "ordered_products"."order_id" = ?  [["order_id", 26]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 11]]
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" INNER JOIN "ordered_products" ON "products"."id" = "ordered_products"."product_id" WHERE "ordered_products"."order_id" = ?  [["order_id", 27]]
+  [1m[36mCustomer Load (0.2ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 15]]
+  [1m[35mProduct Load (0.2ms)[0m  SELECT "products".* FROM "products" INNER JOIN "ordered_products" ON "products"."id" = "ordered_products"."product_id" WHERE "ordered_products"."order_id" = ?  [["order_id", 28]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 11]]
+  [1m[35mProduct Load (0.2ms)[0m  SELECT "products".* FROM "products" INNER JOIN "ordered_products" ON "products"."id" = "ordered_products"."product_id" WHERE "ordered_products"."order_id" = ?  [["order_id", 29]]
+  [1m[36mCustomer Load (0.2ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 14]]
+  [1m[35mProduct Load (0.2ms)[0m  SELECT "products".* FROM "products" INNER JOIN "ordered_products" ON "products"."id" = "ordered_products"."product_id" WHERE "ordered_products"."order_id" = ?  [["order_id", 30]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 14]]
+  Rendered orders/_order.html.erb (175.1ms)
+  Rendered orders/index.html.erb within layouts/application (207.6ms)
+Completed 200 OK in 395ms (Views: 366.7ms | ActiveRecord: 6.8ms)
+
+
+Started GET "/assets/products.self-2becd68c2a0f5999b8f09974a29b118983b8f790d5122e1fd1b021bd2592ec2a.js?body=1" for ::1 at 2019-02-25 09:19:27 -0500
+
+
+Started GET "/orders/21" for ::1 at 2019-02-25 09:20:13 -0500
+Processing by OrdersController#show as HTML
+  Parameters: {"id"=>"21"}
+  [1m[35mOrder Load (0.4ms)[0m  SELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT 1  [["id", 21]]
+[active_model_serializers]   [1m[36mOrderedProduct Load (0.2ms)[0m  [1mSELECT "ordered_products".* FROM "ordered_products" WHERE "ordered_products"."order_id" = ?[0m  [["order_id", 21]]
+[active_model_serializers] No serializer found for resource: #<OrderedProduct id: 21, product_id: 24, order_id: 21, created_at: "2019-02-24 22:08:03", updated_at: "2019-02-24 22:08:03">
+[active_model_serializers]   [1m[35mProduct Load (0.2ms)[0m  SELECT "products".* FROM "products" INNER JOIN "ordered_products" ON "products"."id" = "ordered_products"."product_id" WHERE "ordered_products"."order_id" = ?  [["order_id", 21]]
+[active_model_serializers] Rendered OrderSerializer with ActiveModelSerializers::Adapter::Attributes (100.67ms)
+Completed 200 OK in 154ms (Views: 132.9ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/orders/21" for ::1 at 2019-02-25 09:20:46 -0500
+Processing by OrdersController#show as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mOrder Load (0.3ms)[0m  [1mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT 1[0m  [["id", 21]]
+[active_model_serializers]   [1m[35mOrderedProduct Load (0.2ms)[0m  SELECT "ordered_products".* FROM "ordered_products" WHERE "ordered_products"."order_id" = ?  [["order_id", 21]]
+[active_model_serializers] No serializer found for resource: #<OrderedProduct id: 21, product_id: 24, order_id: 21, created_at: "2019-02-24 22:08:03", updated_at: "2019-02-24 22:08:03">
+[active_model_serializers]   [1m[36mProduct Load (0.3ms)[0m  [1mSELECT "products".* FROM "products" INNER JOIN "ordered_products" ON "products"."id" = "ordered_products"."product_id" WHERE "ordered_products"."order_id" = ?[0m  [["order_id", 21]]
+[active_model_serializers] Rendered OrderSerializer with ActiveModelSerializers::Adapter::Attributes (105.03ms)
+Completed 200 OK in 126ms (Views: 107.6ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/orders/21" for ::1 at 2019-02-25 09:21:00 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by OrdersController#show as HTML
+  Parameters: {"id"=>"21"}
+  [1m[35mOrder Load (0.2ms)[0m  SELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT 1  [["id", 21]]
+[active_model_serializers]   [1m[36mOrderedProduct Load (0.3ms)[0m  [1mSELECT "ordered_products".* FROM "ordered_products" WHERE "ordered_products"."order_id" = ?[0m  [["order_id", 21]]
+[active_model_serializers] No serializer found for resource: #<OrderedProduct id: 21, product_id: 24, order_id: 21, created_at: "2019-02-24 22:08:03", updated_at: "2019-02-24 22:08:03">
+[active_model_serializers]   [1m[35mProduct Load (0.3ms)[0m  SELECT "products".* FROM "products" INNER JOIN "ordered_products" ON "products"."id" = "ordered_products"."product_id" WHERE "ordered_products"."order_id" = ?  [["order_id", 21]]
+[active_model_serializers] Rendered OrderSerializer with ActiveModelSerializers::Adapter::Attributes (99.76ms)
+Completed 200 OK in 184ms (Views: 138.3ms | ActiveRecord: 2.1ms)
+  [1m[35mProduct Load (0.3ms)[0m  SELECT "products".* FROM "products" WHERE "products"."name" = ?  [["name", ""]]
+  [1m[36m (0.3ms)[0m  [1mSELECT "products"."name" FROM "products"[0m
+
+
+Started GET "/orders/21" for ::1 at 2019-02-25 09:21:46 -0500
+Processing by OrdersController#show as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mOrder Load (0.2ms)[0m  [1mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT 1[0m  [["id", 21]]
+[active_model_serializers]   [1m[35mProduct Load (0.3ms)[0m  SELECT "products".* FROM "products" INNER JOIN "ordered_products" ON "products"."id" = "ordered_products"."product_id" WHERE "ordered_products"."order_id" = ?  [["order_id", 21]]
+[active_model_serializers] Rendered OrderSerializer with ActiveModelSerializers::Adapter::Attributes (22.94ms)
+Completed 200 OK in 38ms (Views: 24.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/orders/21" for ::1 at 2019-02-25 09:21:57 -0500
+Processing by OrdersController#show as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mOrder Load (0.2ms)[0m  [1mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT 1[0m  [["id", 21]]
+[active_model_serializers]   [1m[35mProduct Load (0.2ms)[0m  SELECT "products".* FROM "products" INNER JOIN "ordered_products" ON "products"."id" = "ordered_products"."product_id" WHERE "ordered_products"."order_id" = ?  [["order_id", 21]]
+[active_model_serializers] Rendered OrderSerializer with ActiveModelSerializers::Adapter::Attributes (20.92ms)
+Completed 200 OK in 37ms (Views: 22.1ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/orders/21" for ::1 at 2019-02-25 09:22:03 -0500
+Processing by OrdersController#show as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mOrder Load (0.2ms)[0m  [1mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT 1[0m  [["id", 21]]
+[active_model_serializers]   [1m[35mProduct Load (0.5ms)[0m  SELECT "products".* FROM "products" INNER JOIN "ordered_products" ON "products"."id" = "ordered_products"."product_id" WHERE "ordered_products"."order_id" = ?  [["order_id", 21]]
+[active_model_serializers] Rendered OrderSerializer with ActiveModelSerializers::Adapter::Attributes (19.87ms)
+Completed 200 OK in 36ms (Views: 20.9ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/orders/21" for ::1 at 2019-02-25 09:23:32 -0500
+Processing by OrdersController#show as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mOrder Load (0.4ms)[0m  [1mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT 1[0m  [["id", 21]]
+[active_model_serializers]   [1m[35mProduct Load (0.4ms)[0m  SELECT "products".* FROM "products" INNER JOIN "ordered_products" ON "products"."id" = "ordered_products"."product_id" WHERE "ordered_products"."order_id" = ?  [["order_id", 21]]
+[active_model_serializers] Rendered OrderSerializer with ActiveModelSerializers::Adapter::Attributes (27.58ms)
+Completed 200 OK in 50ms (Views: 32.5ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/products" for ::1 at 2019-02-25 09:24:17 -0500
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.5ms)[0m  [1mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 404ms (Views: 397.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/products/21.json" for ::1 at 2019-02-25 09:24:20 -0500
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"21"}
+  [1m[35mProduct Load (0.2ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 21]]
+[active_model_serializers]   [1m[36mOrder Load (0.2ms)[0m  [1mSELECT "orders".* FROM "orders" INNER JOIN "ordered_products" ON "orders"."id" = "ordered_products"."order_id" WHERE "ordered_products"."product_id" = ?[0m  [["product_id", 21]]
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (26.27ms)
+Completed 200 OK in 32ms (Views: 28.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/products" for ::1 at 2019-02-25 09:25:19 -0500
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.4ms)[0m  SELECT "products".* FROM "products"
+  Rendered products/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 118ms (Views: 116.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/products.self-9703aed5ff27ebd9adbf3b3c4c23e01dfa57dffd2e58602a7fc35d77f2973a40.js?body=1" for ::1 at 2019-02-25 09:25:20 -0500
+
+
+Started GET "/products/21.json" for ::1 at 2019-02-25 09:25:31 -0500
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"21"}
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 21]]
+[active_model_serializers]   [1m[35mOrder Load (0.2ms)[0m  SELECT "orders".* FROM "orders" INNER JOIN "ordered_products" ON "orders"."id" = "ordered_products"."order_id" WHERE "ordered_products"."product_id" = ?  [["product_id", 21]]
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (3.56ms)
+Completed 200 OK in 6ms (Views: 4.2ms | ActiveRecord: 0.4ms)
