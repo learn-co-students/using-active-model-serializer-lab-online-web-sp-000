@@ -40,6 +40,7 @@ group :development, :test do
     gem 'capybara'
     gem 'faker'
     gem 'shoulda'
+    gem 'selenium-webdriver'
     gem 'poltergeist', '~> 1.14.0'
     gem 'pry-rails'
     gem 'pry-byebug'
