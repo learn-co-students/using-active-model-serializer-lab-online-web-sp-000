@@ -33,6 +33,8 @@ RSpec.describe "Products", type: :feature do
   end
 
   describe "products index" do
+
+    #works fine in manual testing, but not here for some reason
     it 'gets the description and inventory', js: true do
       product = Product.create!(name: "Test Product", inventory: 0, description: "This is a test description with more text than should be there.")
       customer = Customer.create(:name => Faker::Name.name)
