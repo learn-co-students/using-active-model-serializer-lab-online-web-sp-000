@@ -14,7 +14,7 @@ $(function() {
         if (json.inventory === 0){
           inventoryText = "<strong>Sold Out</strong>";
         }
-        const descriptionText = "<p>" + json.description + "</p><p>" + inventoryText + "</p>";
+        const descriptionText = "<p>" + "id:" + "&nbsp" + json.id + "</p>" + "<p>" + json.description + "</p>" + "<p>" + inventoryText + "</p>";
         $("#product-" + id).html(descriptionText);
     });
   });
