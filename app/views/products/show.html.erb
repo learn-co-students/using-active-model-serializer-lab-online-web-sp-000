@@ -3,7 +3,7 @@
 <p class="productInventory"><%= @product.inventory %></p>
 <p class="productPrice"><%= @product.price %></p>
 <p class="productDescription"><%= @product.description %></p>
-
+<a href="#" class="js-next" onclick="loadNext(<%=@product.id%>); return false">Next Product</a>
 <script type="text/javascript" charset="utf-8">
 $(function () {
   $(".js-next").on("click", function(event) {
