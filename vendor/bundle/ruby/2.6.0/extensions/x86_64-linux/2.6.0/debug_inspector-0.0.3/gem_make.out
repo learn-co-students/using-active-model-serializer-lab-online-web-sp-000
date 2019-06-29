@@ -1,0 +1,15 @@
+current directory: /home/parallaxer/Desktop/Rails_JS/using-active-model-serializer-lab-online-web-sp-000/vendor/bundle/ruby/2.6.0/gems/debug_inspector-0.0.3/ext/debug_inspector
+/home/parallaxer/.rvm/rubies/ruby-2.6.1/bin/ruby -I /home/parallaxer/.rvm/rubies/ruby-2.6.1/lib/ruby/site_ruby/2.6.0 -r ./siteconf20190628-58772-1fn0nk6.rb extconf.rb
+creating Makefile
+
+current directory: /home/parallaxer/Desktop/Rails_JS/using-active-model-serializer-lab-online-web-sp-000/vendor/bundle/ruby/2.6.0/gems/debug_inspector-0.0.3/ext/debug_inspector
+make "DESTDIR=" clean
+
+current directory: /home/parallaxer/Desktop/Rails_JS/using-active-model-serializer-lab-online-web-sp-000/vendor/bundle/ruby/2.6.0/gems/debug_inspector-0.0.3/ext/debug_inspector
+make "DESTDIR="
+compiling debug_inspector.c
+linking shared-object debug_inspector.so
+
+current directory: /home/parallaxer/Desktop/Rails_JS/using-active-model-serializer-lab-online-web-sp-000/vendor/bundle/ruby/2.6.0/gems/debug_inspector-0.0.3/ext/debug_inspector
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 debug_inspector.so ./.gem.20190628-58772-xwtr6x
