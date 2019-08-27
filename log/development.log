@@ -1601,3 +1601,818 @@ Processing by ProductsController#show as JSON
   [1m[36mOrder Load (0.2ms)[0m  [1mSELECT "orders".* FROM "orders" INNER JOIN "ordered_products" ON "orders"."id" = "ordered_products"."order_id" WHERE "ordered_products"."product_id" = ?[0m  [["product_id", 13]]
   [1m[35mProduct Load (0.2ms)[0m  SELECT "products".* FROM "products" INNER JOIN "ordered_products" ON "products"."id" = "ordered_products"."product_id" WHERE "ordered_products"."order_id" = ?  [["order_id", 20]]
 Completed 200 OK in 29ms (Views: 25.8ms | ActiveRecord: 0.9ms)
+Started GET "/products" for ::1 at 2019-08-27 13:51:40 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (13.3ms)
+Completed 200 OK in 940ms (Views: 923.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/products/1" for ::1 at 2019-08-27 13:51:44 -0400
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 404 Not Found in 6ms (ActiveRecord: 0.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Product with 'id'=1):
+  
+app/controllers/products_controller.rb:26:in `show'
+  Rendering /Users/adamsarli/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/adamsarli/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/adamsarli/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.2ms)
+  Rendering /Users/adamsarli/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/adamsarli/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendering /Users/adamsarli/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/adamsarli/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/adamsarli/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (30.8ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::HTML` to `Mime[:html]`. (called from acceptable_content_type? at /Users/adamsarli/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/middleware.rb:58)
+  Rendering /Users/adamsarli/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb
+  Rendered /Users/adamsarli/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendering /Users/adamsarli/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /Users/adamsarli/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /Users/adamsarli/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendering /Users/adamsarli/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /Users/adamsarli/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendering /Users/adamsarli/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /Users/adamsarli/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::WEB_CONSOLE_V2` to `Mime[:web_console_v2]`. (called from ___sers_adamsarli__rvm_gems_ruby_______gems_web_console_______lib_web_console_templates_console_js_erb__253116065631631216_70245672014880 at /Users/adamsarli/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb:491)
+  Rendered /Users/adamsarli/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (1274.7ms)
+  Rendering /Users/adamsarli/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /Users/adamsarli/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendering /Users/adamsarli/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+  Rendered /Users/adamsarli/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/adamsarli/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (1306.5ms)
+Started GET "/products/2" for ::1 at 2019-08-27 13:51:51 -0400
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Product with 'id'=2):
+  
+app/controllers/products_controller.rb:26:in `show'
+  Rendering /Users/adamsarli/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/adamsarli/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/adamsarli/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.3ms)
+  Rendering /Users/adamsarli/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/adamsarli/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendering /Users/adamsarli/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/adamsarli/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/adamsarli/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (20.7ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::HTML` to `Mime[:html]`. (called from acceptable_content_type? at /Users/adamsarli/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/middleware.rb:58)
+  Rendering /Users/adamsarli/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb
+  Rendered /Users/adamsarli/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendering /Users/adamsarli/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /Users/adamsarli/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /Users/adamsarli/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendering /Users/adamsarli/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /Users/adamsarli/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendering /Users/adamsarli/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /Users/adamsarli/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::WEB_CONSOLE_V2` to `Mime[:web_console_v2]`. (called from ___sers_adamsarli__rvm_gems_ruby_______gems_web_console_______lib_web_console_templates_console_js_erb__253116065631631216_70245688820260 at /Users/adamsarli/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb:491)
+  Rendered /Users/adamsarli/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (21.5ms)
+  Rendering /Users/adamsarli/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /Users/adamsarli/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendering /Users/adamsarli/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+  Rendered /Users/adamsarli/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/adamsarli/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (38.7ms)
+Started GET "/products/3/data" for ::1 at 2019-08-27 13:51:54 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/products/3/data"):
+  
+actionpack (5.0.7.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.7.1) lib/rails/engine.rb:522:in `call'
+rack (2.0.6) lib/rack/handler/webrick.rb:86:in `service'
+/Users/adamsarli/.rvm/rubies/ruby-2.6.1/lib/ruby/2.6.0/webrick/httpserver.rb:140:in `service'
+/Users/adamsarli/.rvm/rubies/ruby-2.6.1/lib/ruby/2.6.0/webrick/httpserver.rb:96:in `run'
+/Users/adamsarli/.rvm/rubies/ruby-2.6.1/lib/ruby/2.6.0/webrick/server.rb:307:in `block in start_thread'
+  Rendering /Users/adamsarli/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/adamsarli/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/adamsarli/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered collection of /Users/adamsarli/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [23 times] (12.4ms)
+  Rendered /Users/adamsarli/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (11.4ms)
+  Rendering /Users/adamsarli/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/adamsarli/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/adamsarli/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (56.4ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::HTML` to `Mime[:html]`. (called from acceptable_content_type? at /Users/adamsarli/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/middleware.rb:58)
+  Rendering /Users/adamsarli/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb
+  Rendered /Users/adamsarli/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendering /Users/adamsarli/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /Users/adamsarli/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /Users/adamsarli/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendering /Users/adamsarli/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /Users/adamsarli/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendering /Users/adamsarli/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /Users/adamsarli/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::WEB_CONSOLE_V2` to `Mime[:web_console_v2]`. (called from ___sers_adamsarli__rvm_gems_ruby_______gems_web_console_______lib_web_console_templates_console_js_erb__253116065631631216_70245682402520 at /Users/adamsarli/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb:491)
+  Rendered /Users/adamsarli/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (19.2ms)
+  Rendering /Users/adamsarli/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /Users/adamsarli/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendering /Users/adamsarli/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+  Rendered /Users/adamsarli/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/adamsarli/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (37.8ms)
+Started GET "/products/3" for ::1 at 2019-08-27 13:51:56 -0400
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.1ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Product with 'id'=3):
+  
+app/controllers/products_controller.rb:26:in `show'
+  Rendering /Users/adamsarli/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/adamsarli/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/adamsarli/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.4ms)
+  Rendering /Users/adamsarli/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/adamsarli/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendering /Users/adamsarli/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/adamsarli/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/adamsarli/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (23.0ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::HTML` to `Mime[:html]`. (called from acceptable_content_type? at /Users/adamsarli/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/middleware.rb:58)
+  Rendering /Users/adamsarli/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb
+  Rendered /Users/adamsarli/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendering /Users/adamsarli/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /Users/adamsarli/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /Users/adamsarli/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendering /Users/adamsarli/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /Users/adamsarli/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendering /Users/adamsarli/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /Users/adamsarli/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::WEB_CONSOLE_V2` to `Mime[:web_console_v2]`. (called from ___sers_adamsarli__rvm_gems_ruby_______gems_web_console_______lib_web_console_templates_console_js_erb__253116065631631216_70245683130680 at /Users/adamsarli/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb:491)
+  Rendered /Users/adamsarli/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (18.9ms)
+  Rendering /Users/adamsarli/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /Users/adamsarli/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendering /Users/adamsarli/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+  Rendered /Users/adamsarli/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/adamsarli/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (38.8ms)
+Started GET "/products" for ::1 at 2019-08-27 13:51:59 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 40ms (Views: 37.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/products/12/description" for ::1 at 2019-08-27 13:52:01 -0400
+Processing by ProductsController#description as */*
+  Parameters: {"id"=>"12"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/products/12/inventory" for ::1 at 2019-08-27 13:52:01 -0400
+Processing by ProductsController#inventory as */*
+  Parameters: {"id"=>"12"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/products" for ::1 at 2019-08-27 13:52:54 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 22ms (Views: 20.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products/12" for ::1 at 2019-08-27 13:52:56 -0400
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 24ms (Views: 21.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products/12.json" for ::1 at 2019-08-27 13:53:00 -0400
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"12"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (0.82ms)
+Completed 200 OK in 24ms (Views: 21.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products/12" for ::1 at 2019-08-27 13:55:40 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 377ms (Views: 353.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/products/13.json" for ::1 at 2019-08-27 13:55:41 -0400
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"13"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (0.72ms)
+Completed 200 OK in 20ms (Views: 18.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/products/14.json" for ::1 at 2019-08-27 13:55:43 -0400
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"14"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (0.32ms)
+Completed 200 OK in 2ms (Views: 0.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/products/15.json" for ::1 at 2019-08-27 13:55:43 -0400
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"15"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (0.36ms)
+Completed 200 OK in 2ms (Views: 0.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products/16.json" for ::1 at 2019-08-27 13:55:44 -0400
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"16"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (0.38ms)
+Completed 200 OK in 2ms (Views: 0.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/products/12.json" for ::1 at 2019-08-27 13:56:50 -0400
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"12"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (0.41ms)
+Completed 200 OK in 3ms (Views: 1.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products/12.json" for ::1 at 2019-08-27 13:57:15 -0400
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"12"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mOrderedProduct Load (0.1ms)[0m  [1m[34mSELECT "ordered_products".* FROM "ordered_products" WHERE "ordered_products"."product_id" = ?[0m  [["product_id", 12]]
+[active_model_serializers]   [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders" INNER JOIN "ordered_products" ON "orders"."id" = "ordered_products"."order_id" WHERE "ordered_products"."product_id" = ?[0m  [["product_id", 12]]
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (41.8ms)
+Completed 200 OK in 77ms (Views: 63.1ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/products/12.json" for ::1 at 2019-08-27 13:57:41 -0400
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"12"}
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT "orders".* FROM "orders" INNER JOIN "ordered_products" ON "orders"."id" = "ordered_products"."order_id" WHERE "ordered_products"."product_id" = ?[0m  [["product_id", 12]]
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (16.98ms)
+Completed 200 OK in 30ms (Views: 17.7ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/products/13.json" for ::1 at 2019-08-27 13:57:56 -0400
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"13"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT "orders".* FROM "orders" INNER JOIN "ordered_products" ON "orders"."id" = "ordered_products"."order_id" WHERE "ordered_products"."product_id" = ?[0m  [["product_id", 13]]
+[active_model_serializers] No serializer found for resource: #<Order id: 20, customer_id: 6, invoice_id: 9, created_at: "2016-02-23 05:10:50", updated_at: "2016-02-23 05:10:50">
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (55.53ms)
+Completed 200 OK in 57ms (Views: 56.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products/13" for ::1 at 2019-08-27 13:58:01 -0400
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 24ms (Views: 22.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/products/13.json" for ::1 at 2019-08-27 13:58:05 -0400
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"13"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders" INNER JOIN "ordered_products" ON "orders"."id" = "ordered_products"."order_id" WHERE "ordered_products"."product_id" = ?[0m  [["product_id", 13]]
+[active_model_serializers] No serializer found for resource: #<Order id: 20, customer_id: 6, invoice_id: 9, created_at: "2016-02-23 05:10:50", updated_at: "2016-02-23 05:10:50">
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (2.73ms)
+Completed 200 OK in 5ms (Views: 3.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products/13.json" for ::1 at 2019-08-27 13:58:14 -0400
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"13"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mOrderedProduct Load (0.2ms)[0m  [1m[34mSELECT "ordered_products".* FROM "ordered_products" WHERE "ordered_products"."product_id" = ?[0m  [["product_id", 13]]
+[active_model_serializers] No serializer found for resource: #<OrderedProduct id: 20, product_id: 13, order_id: 20, created_at: "2016-02-23 05:10:50", updated_at: "2016-02-23 05:10:50">
+[active_model_serializers]   [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders" INNER JOIN "ordered_products" ON "orders"."id" = "ordered_products"."order_id" WHERE "ordered_products"."product_id" = ?[0m  [["product_id", 13]]
+[active_model_serializers] No serializer found for resource: #<Order id: 20, customer_id: 6, invoice_id: 9, created_at: "2016-02-23 05:10:50", updated_at: "2016-02-23 05:10:50">
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (94.07ms)
+Completed 200 OK in 109ms (Views: 94.6ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/products/13.json" for ::1 at 2019-08-27 13:58:30 -0400
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"13"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders" INNER JOIN "ordered_products" ON "orders"."id" = "ordered_products"."order_id" WHERE "ordered_products"."product_id" = ?[0m  [["product_id", 13]]
+[active_model_serializers] No serializer found for resource: #<Order id: 20, customer_id: 6, invoice_id: 9, created_at: "2016-02-23 05:10:50", updated_at: "2016-02-23 05:10:50">
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (70.17ms)
+Completed 200 OK in 92ms (Views: 72.9ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/products" for ::1 at 2019-08-27 13:59:38 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 38ms (Views: 34.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/products/12.json" for ::1 at 2019-08-27 13:59:40 -0400
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"12"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT "orders".* FROM "orders" INNER JOIN "ordered_products" ON "orders"."id" = "ordered_products"."order_id" WHERE "ordered_products"."product_id" = ?[0m  [["product_id", 12]]
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (3.13ms)
+Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2019-08-27 14:00:04 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Parameters: {"internal"=>true}
+  Rendering /Users/adamsarli/.rvm/gems/ruby-2.6.1/gems/railties-5.0.7.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/adamsarli/.rvm/gems/ruby-2.6.1/gems/railties-5.0.7.1/lib/rails/templates/rails/welcome/index.html.erb (3.4ms)
+Completed 200 OK in 9ms (Views: 5.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products" for ::1 at 2019-08-27 14:00:06 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 47ms (Views: 43.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/products/13.json" for ::1 at 2019-08-27 14:00:09 -0400
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"13"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders" INNER JOIN "ordered_products" ON "orders"."id" = "ordered_products"."order_id" WHERE "ordered_products"."product_id" = ?[0m  [["product_id", 13]]
+[active_model_serializers] No serializer found for resource: #<Order id: 20, customer_id: 6, invoice_id: 9, created_at: "2016-02-23 05:10:50", updated_at: "2016-02-23 05:10:50">
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (12.97ms)
+Completed 200 OK in 16ms (Views: 13.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products" for ::1 at 2019-08-27 14:07:29 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 52ms (Views: 50.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products/12.json" for ::1 at 2019-08-27 14:07:33 -0400
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"12"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT "orders".* FROM "orders" INNER JOIN "ordered_products" ON "orders"."id" = "ordered_products"."order_id" WHERE "ordered_products"."product_id" = ?[0m  [["product_id", 12]]
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (3.38ms)
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products/13.json" for ::1 at 2019-08-27 14:07:35 -0400
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"13"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT "orders".* FROM "orders" INNER JOIN "ordered_products" ON "orders"."id" = "ordered_products"."order_id" WHERE "ordered_products"."product_id" = ?[0m  [["product_id", 13]]
+[active_model_serializers] No serializer found for resource: #<Order id: 20, customer_id: 6, invoice_id: 9, created_at: "2016-02-23 05:10:50", updated_at: "2016-02-23 05:10:50">
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (2.11ms)
+Completed 200 OK in 4ms (Views: 2.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products/13.json" for ::1 at 2019-08-27 14:07:40 -0400
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"13"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT "orders".* FROM "orders" INNER JOIN "ordered_products" ON "orders"."id" = "ordered_products"."order_id" WHERE "ordered_products"."product_id" = ?[0m  [["product_id", 13]]
+[active_model_serializers] No serializer found for resource: #<Order id: 20, customer_id: 6, invoice_id: 9, created_at: "2016-02-23 05:10:50", updated_at: "2016-02-23 05:10:50">
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (2.27ms)
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products/14.json" for ::1 at 2019-08-27 14:07:41 -0400
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"14"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT "orders".* FROM "orders" INNER JOIN "ordered_products" ON "orders"."id" = "ordered_products"."order_id" WHERE "ordered_products"."product_id" = ?[0m  [["product_id", 14]]
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (2.42ms)
+Completed 200 OK in 5ms (Views: 2.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products/15.json" for ::1 at 2019-08-27 14:07:43 -0400
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"15"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders" INNER JOIN "ordered_products" ON "orders"."id" = "ordered_products"."order_id" WHERE "ordered_products"."product_id" = ?[0m  [["product_id", 15]]
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (2.13ms)
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products/16.json" for ::1 at 2019-08-27 14:07:44 -0400
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"16"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT "orders".* FROM "orders" INNER JOIN "ordered_products" ON "orders"."id" = "ordered_products"."order_id" WHERE "ordered_products"."product_id" = ?[0m  [["product_id", 16]]
+[active_model_serializers] No serializer found for resource: #<Order id: 12, customer_id: 8, invoice_id: 10, created_at: "2016-02-23 05:10:50", updated_at: "2016-02-23 05:10:50">
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (2.23ms)
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products/17.json" for ::1 at 2019-08-27 14:07:46 -0400
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"17"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT "orders".* FROM "orders" INNER JOIN "ordered_products" ON "orders"."id" = "ordered_products"."order_id" WHERE "ordered_products"."product_id" = ?[0m  [["product_id", 17]]
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (1.74ms)
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products/18.json" for ::1 at 2019-08-27 14:07:47 -0400
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"18"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT "orders".* FROM "orders" INNER JOIN "ordered_products" ON "orders"."id" = "ordered_products"."order_id" WHERE "ordered_products"."product_id" = ?[0m  [["product_id", 18]]
+[active_model_serializers] No serializer found for resource: #<Order id: 13, customer_id: 9, invoice_id: 6, created_at: "2016-02-23 05:10:50", updated_at: "2016-02-23 05:10:50">
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (2.59ms)
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products/17.json" for ::1 at 2019-08-27 14:07:48 -0400
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"17"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT "orders".* FROM "orders" INNER JOIN "ordered_products" ON "orders"."id" = "ordered_products"."order_id" WHERE "ordered_products"."product_id" = ?[0m  [["product_id", 17]]
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (1.77ms)
+Completed 200 OK in 4ms (Views: 2.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products/19.json" for ::1 at 2019-08-27 14:07:50 -0400
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"19"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT "orders".* FROM "orders" INNER JOIN "ordered_products" ON "orders"."id" = "ordered_products"."order_id" WHERE "ordered_products"."product_id" = ?[0m  [["product_id", 19]]
+[active_model_serializers] No serializer found for resource: #<Order id: 19, customer_id: 6, invoice_id: 6, created_at: "2016-02-23 05:10:50", updated_at: "2016-02-23 05:10:50">
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (3.09ms)
+Completed 200 OK in 5ms (Views: 3.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products/20.json" for ::1 at 2019-08-27 14:07:51 -0400
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"20"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT "orders".* FROM "orders" INNER JOIN "ordered_products" ON "orders"."id" = "ordered_products"."order_id" WHERE "ordered_products"."product_id" = ?[0m  [["product_id", 20]]
+[active_model_serializers] No serializer found for resource: #<Order id: 11, customer_id: 10, invoice_id: 6, created_at: "2016-02-23 05:10:50", updated_at: "2016-02-23 05:10:50">
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (2.87ms)
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products" for ::1 at 2019-08-27 14:11:05 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 22ms (Views: 21.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products/12.json" for ::1 at 2019-08-27 14:11:09 -0400
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"12"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders" INNER JOIN "ordered_products" ON "orders"."id" = "ordered_products"."order_id" WHERE "ordered_products"."product_id" = ?[0m  [["product_id", 12]]
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (2.83ms)
+Completed 200 OK in 5ms (Views: 3.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products/13.json" for ::1 at 2019-08-27 14:11:10 -0400
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"13"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT "orders".* FROM "orders" INNER JOIN "ordered_products" ON "orders"."id" = "ordered_products"."order_id" WHERE "ordered_products"."product_id" = ?[0m  [["product_id", 13]]
+[active_model_serializers] No serializer found for resource: #<Order id: 20, customer_id: 6, invoice_id: 9, created_at: "2016-02-23 05:10:50", updated_at: "2016-02-23 05:10:50">
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (2.75ms)
+Completed 200 OK in 5ms (Views: 3.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products/14.json" for ::1 at 2019-08-27 14:11:14 -0400
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"14"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders" INNER JOIN "ordered_products" ON "orders"."id" = "ordered_products"."order_id" WHERE "ordered_products"."product_id" = ?[0m  [["product_id", 14]]
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (2.99ms)
+Completed 200 OK in 5ms (Views: 3.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products/15.json" for ::1 at 2019-08-27 14:11:15 -0400
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"15"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT "orders".* FROM "orders" INNER JOIN "ordered_products" ON "orders"."id" = "ordered_products"."order_id" WHERE "ordered_products"."product_id" = ?[0m  [["product_id", 15]]
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (1.73ms)
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products/16.json" for ::1 at 2019-08-27 14:11:17 -0400
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"16"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT "orders".* FROM "orders" INNER JOIN "ordered_products" ON "orders"."id" = "ordered_products"."order_id" WHERE "ordered_products"."product_id" = ?[0m  [["product_id", 16]]
+[active_model_serializers] No serializer found for resource: #<Order id: 12, customer_id: 8, invoice_id: 10, created_at: "2016-02-23 05:10:50", updated_at: "2016-02-23 05:10:50">
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (2.29ms)
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products" for ::1 at 2019-08-27 14:11:50 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 23ms (Views: 21.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products/14.json" for ::1 at 2019-08-27 14:11:52 -0400
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"14"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT "orders".* FROM "orders" INNER JOIN "ordered_products" ON "orders"."id" = "ordered_products"."order_id" WHERE "ordered_products"."product_id" = ?[0m  [["product_id", 14]]
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (1.68ms)
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products/15.json" for ::1 at 2019-08-27 14:11:56 -0400
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"15"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT "orders".* FROM "orders" INNER JOIN "ordered_products" ON "orders"."id" = "ordered_products"."order_id" WHERE "ordered_products"."product_id" = ?[0m  [["product_id", 15]]
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (2.64ms)
+Completed 200 OK in 5ms (Views: 3.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products/16.json" for ::1 at 2019-08-27 14:11:58 -0400
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"16"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT "orders".* FROM "orders" INNER JOIN "ordered_products" ON "orders"."id" = "ordered_products"."order_id" WHERE "ordered_products"."product_id" = ?[0m  [["product_id", 16]]
+[active_model_serializers] No serializer found for resource: #<Order id: 12, customer_id: 8, invoice_id: 10, created_at: "2016-02-23 05:10:50", updated_at: "2016-02-23 05:10:50">
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (2.64ms)
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products" for ::1 at 2019-08-27 14:12:34 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 22ms (Views: 20.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products/14.json" for ::1 at 2019-08-27 14:12:35 -0400
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"14"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT "orders".* FROM "orders" INNER JOIN "ordered_products" ON "orders"."id" = "ordered_products"."order_id" WHERE "ordered_products"."product_id" = ?[0m  [["product_id", 14]]
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (3.57ms)
+Completed 200 OK in 6ms (Views: 4.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products/13.json" for ::1 at 2019-08-27 14:12:36 -0400
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"13"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT "orders".* FROM "orders" INNER JOIN "ordered_products" ON "orders"."id" = "ordered_products"."order_id" WHERE "ordered_products"."product_id" = ?[0m  [["product_id", 13]]
+[active_model_serializers] No serializer found for resource: #<Order id: 20, customer_id: 6, invoice_id: 9, created_at: "2016-02-23 05:10:50", updated_at: "2016-02-23 05:10:50">
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (2.33ms)
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products" for ::1 at 2019-08-27 14:13:26 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 25ms (Views: 23.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products" for ::1 at 2019-08-27 14:13:45 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 21ms (Views: 19.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products/12.json" for ::1 at 2019-08-27 14:13:46 -0400
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"12"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT "orders".* FROM "orders" INNER JOIN "ordered_products" ON "orders"."id" = "ordered_products"."order_id" WHERE "ordered_products"."product_id" = ?[0m  [["product_id", 12]]
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (2.23ms)
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products/13.json" for ::1 at 2019-08-27 14:13:47 -0400
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"13"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders" INNER JOIN "ordered_products" ON "orders"."id" = "ordered_products"."order_id" WHERE "ordered_products"."product_id" = ?[0m  [["product_id", 13]]
+[active_model_serializers] No serializer found for resource: #<Order id: 20, customer_id: 6, invoice_id: 9, created_at: "2016-02-23 05:10:50", updated_at: "2016-02-23 05:10:50">
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (2.97ms)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products" for ::1 at 2019-08-27 14:13:56 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 62ms (Views: 60.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products/13.json" for ::1 at 2019-08-27 14:13:58 -0400
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"13"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT "orders".* FROM "orders" INNER JOIN "ordered_products" ON "orders"."id" = "ordered_products"."order_id" WHERE "ordered_products"."product_id" = ?[0m  [["product_id", 13]]
+[active_model_serializers] No serializer found for resource: #<Order id: 20, customer_id: 6, invoice_id: 9, created_at: "2016-02-23 05:10:50", updated_at: "2016-02-23 05:10:50">
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (3.17ms)
+Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products/14.json" for ::1 at 2019-08-27 14:14:20 -0400
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"14"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT "orders".* FROM "orders" INNER JOIN "ordered_products" ON "orders"."id" = "ordered_products"."order_id" WHERE "ordered_products"."product_id" = ?[0m  [["product_id", 14]]
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (1.91ms)
+Completed 200 OK in 4ms (Views: 2.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products/15.json" for ::1 at 2019-08-27 14:14:22 -0400
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"15"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT "orders".* FROM "orders" INNER JOIN "ordered_products" ON "orders"."id" = "ordered_products"."order_id" WHERE "ordered_products"."product_id" = ?[0m  [["product_id", 15]]
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (1.89ms)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products/16.json" for ::1 at 2019-08-27 14:14:24 -0400
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"16"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT "orders".* FROM "orders" INNER JOIN "ordered_products" ON "orders"."id" = "ordered_products"."order_id" WHERE "ordered_products"."product_id" = ?[0m  [["product_id", 16]]
+[active_model_serializers] No serializer found for resource: #<Order id: 12, customer_id: 8, invoice_id: 10, created_at: "2016-02-23 05:10:50", updated_at: "2016-02-23 05:10:50">
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (2.89ms)
+Completed 200 OK in 5ms (Views: 3.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products/17.json" for ::1 at 2019-08-27 14:14:26 -0400
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"17"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT "orders".* FROM "orders" INNER JOIN "ordered_products" ON "orders"."id" = "ordered_products"."order_id" WHERE "ordered_products"."product_id" = ?[0m  [["product_id", 17]]
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (1.73ms)
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products/18.json" for ::1 at 2019-08-27 14:14:27 -0400
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"18"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT "orders".* FROM "orders" INNER JOIN "ordered_products" ON "orders"."id" = "ordered_products"."order_id" WHERE "ordered_products"."product_id" = ?[0m  [["product_id", 18]]
+[active_model_serializers] No serializer found for resource: #<Order id: 13, customer_id: 9, invoice_id: 6, created_at: "2016-02-23 05:10:50", updated_at: "2016-02-23 05:10:50">
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (2.46ms)
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products/19.json" for ::1 at 2019-08-27 14:14:29 -0400
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"19"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT "orders".* FROM "orders" INNER JOIN "ordered_products" ON "orders"."id" = "ordered_products"."order_id" WHERE "ordered_products"."product_id" = ?[0m  [["product_id", 19]]
+[active_model_serializers] No serializer found for resource: #<Order id: 19, customer_id: 6, invoice_id: 6, created_at: "2016-02-23 05:10:50", updated_at: "2016-02-23 05:10:50">
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (2.31ms)
+Completed 200 OK in 5ms (Views: 2.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products/20.json" for ::1 at 2019-08-27 14:14:31 -0400
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"20"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT "orders".* FROM "orders" INNER JOIN "ordered_products" ON "orders"."id" = "ordered_products"."order_id" WHERE "ordered_products"."product_id" = ?[0m  [["product_id", 20]]
+[active_model_serializers] No serializer found for resource: #<Order id: 11, customer_id: 10, invoice_id: 6, created_at: "2016-02-23 05:10:50", updated_at: "2016-02-23 05:10:50">
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (2.99ms)
+Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/orders" for ::1 at 2019-08-27 14:15:10 -0400
+Processing by OrdersController#index as HTML
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" INNER JOIN "ordered_products" ON "products"."id" = "ordered_products"."product_id" WHERE "ordered_products"."order_id" = ?[0m  [["order_id", 11]]
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" INNER JOIN "ordered_products" ON "products"."id" = "ordered_products"."product_id" WHERE "ordered_products"."order_id" = ?[0m  [["order_id", 12]]
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" INNER JOIN "ordered_products" ON "products"."id" = "ordered_products"."product_id" WHERE "ordered_products"."order_id" = ?[0m  [["order_id", 13]]
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" INNER JOIN "ordered_products" ON "products"."id" = "ordered_products"."product_id" WHERE "ordered_products"."order_id" = ?[0m  [["order_id", 14]]
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" INNER JOIN "ordered_products" ON "products"."id" = "ordered_products"."product_id" WHERE "ordered_products"."order_id" = ?[0m  [["order_id", 15]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" INNER JOIN "ordered_products" ON "products"."id" = "ordered_products"."product_id" WHERE "ordered_products"."order_id" = ?[0m  [["order_id", 16]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" INNER JOIN "ordered_products" ON "products"."id" = "ordered_products"."product_id" WHERE "ordered_products"."order_id" = ?[0m  [["order_id", 17]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" INNER JOIN "ordered_products" ON "products"."id" = "ordered_products"."product_id" WHERE "ordered_products"."order_id" = ?[0m  [["order_id", 18]]
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mProduct Load (1.5ms)[0m  [1m[34mSELECT "products".* FROM "products" INNER JOIN "ordered_products" ON "products"."id" = "ordered_products"."product_id" WHERE "ordered_products"."order_id" = ?[0m  [["order_id", 19]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" INNER JOIN "ordered_products" ON "products"."id" = "ordered_products"."product_id" WHERE "ordered_products"."order_id" = ?[0m  [["order_id", 20]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendered collection of orders/_order.html.erb [10 times] (40.6ms)
+  Rendered orders/index.html.erb within layouts/application (43.9ms)
+Completed 200 OK in 64ms (Views: 57.9ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/orders/11" for ::1 at 2019-08-27 14:17:55 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by OrdersController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::MissingTemplate (Missing template orders/show, application/show with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/adamsarli/Coding/labs/js-rails/building-apis/using-active-model-serializer-lab-online-web-sp-000/app/views"
+):
+  
+app/controllers/orders_controller.rb:10:in `block (2 levels) in show'
+app/controllers/orders_controller.rb:9:in `show'
+  Rendering /Users/adamsarli/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout
+  Rendering /Users/adamsarli/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/adamsarli/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.5ms)
+  Rendering /Users/adamsarli/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/adamsarli/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendering /Users/adamsarli/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/adamsarli/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/adamsarli/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (35.2ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::HTML` to `Mime[:html]`. (called from acceptable_content_type? at /Users/adamsarli/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/middleware.rb:58)
+  Rendering /Users/adamsarli/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb
+  Rendered /Users/adamsarli/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendering /Users/adamsarli/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /Users/adamsarli/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /Users/adamsarli/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendering /Users/adamsarli/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /Users/adamsarli/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendering /Users/adamsarli/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /Users/adamsarli/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::WEB_CONSOLE_V2` to `Mime[:web_console_v2]`. (called from ___sers_adamsarli__rvm_gems_ruby_______gems_web_console_______lib_web_console_templates_console_js_erb__3074644067558163585_70211020821660 at /Users/adamsarli/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb:491)
+  Rendered /Users/adamsarli/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (1242.1ms)
+  Rendering /Users/adamsarli/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /Users/adamsarli/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendering /Users/adamsarli/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+  Rendered /Users/adamsarli/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/adamsarli/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (1273.7ms)
+Started GET "/orders/11.json" for ::1 at 2019-08-27 14:18:07 -0400
+Processing by OrdersController#show as JSON
+  Parameters: {"id"=>"11"}
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mOrderedProduct Load (0.2ms)[0m  [1m[34mSELECT "ordered_products".* FROM "ordered_products" WHERE "ordered_products"."order_id" = ?[0m  [["order_id", 11]]
+[active_model_serializers] No serializer found for resource: #<OrderedProduct id: 11, product_id: 20, order_id: 11, created_at: "2016-02-23 05:10:50", updated_at: "2016-02-23 05:10:50">
+[active_model_serializers]   [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" INNER JOIN "ordered_products" ON "products"."id" = "ordered_products"."product_id" WHERE "ordered_products"."order_id" = ?[0m  [["order_id", 11]]
+[active_model_serializers] Rendered OrderSerializer with ActiveModelSerializers::Adapter::Attributes (77.47ms)
+Completed 200 OK in 133ms (Views: 130.0ms | ActiveRecord: 1.6ms)
+
+
