@@ -5,19 +5,23 @@
   <button class="js-more" data-id="<%= product.id %>">More Info</button>
 <% end %>
 
+
 <script type="text/javascript" charset="utf-8">
 $(function() {
   $(".js-more").on("click", function() {
     var id = $(this).data("id");
-    $.get("/products/" + id + "/description", function(description) {
-      $.get("/products/" + id + "/inventory", function(inventory) {
+    $.get("/products/" + id + ".json", function(data) {
         var inventoryText = "<strong>Available</strong>";
-        if(inventory === "false"){
+        if(data["inventory"] === 0){
           inventoryText = "<strong>Sold Out</strong>";
         }
-        var descriptionText = "<p>" + description + "</p><p>" + inventoryText + "</p>";
+
+        var ordersText = data["orders"].map(function(order) {
+          return "<p>" + "Order ID: " + order["id"] + "</p><p>Created at: " + order["created_at"] + "</p>"
+        }).join()
+        
+        var descriptionText = "<p>" + data["description"] + "</p><p>" + ordersText + "</p><p>" + inventoryText + "</p>";
         $("#product-" + id).html(descriptionText);
-      });
     });
   });
 });
